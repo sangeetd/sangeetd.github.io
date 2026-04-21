@@ -6,258 +6,349 @@
   <title>Sangeet Das — Senior Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise"></div>
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">SD<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#domains">Domains</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="mailto:sangeet.kumar.das95@gmail.com" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" hidden>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#domains">Domains</a>
+      <a href="#education">Education</a>
+      <a href="mailto:sangeet.kumar.das95@gmail.com">Contact</a>
+    </div>
+  </nav>
 
-  <!-- HERO -->
+  <!-- ── HERO ── -->
   <header class="hero">
-    <div class="hero-inner">
-      <div class="hero-tag reveal">Senior Software Engineer</div>
-      <h1 class="hero-name reveal">Sangeet<br/><em>Das</em></h1>
-      <p class="hero-summary reveal">
-        8 years designing high-performance backend &amp; cloud-native systems.
-        Specialist in Java, Kotlin, microservices, distributed architecture &amp; Kafka-driven platforms.
+    <div class="container">
+      <p class="hero-badge reveal">Senior Software Engineer &nbsp;·&nbsp; 8 Years of Experience</p>
+      <h1 class="hero-name reveal">Sangeet Das</h1>
+      <p class="hero-sub reveal">
+        Designing high-performance backend &amp; cloud-native systems.<br class="d-none-mobile"/>
+        Java · Kotlin · Microservices · Kafka · Distributed Architecture.
       </p>
-      <div class="hero-links reveal">
-        <a href="mailto:sangeet.kumar.das95@gmail.com" class="link-pill">
-          <span class="icon">✉</span> Email
-        </a>
-        <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener" class="link-pill">
-          <span class="icon">in</span> LinkedIn
-        </a>
-        <a href="https://github.com/sangeetd" target="_blank" rel="noopener" class="link-pill">
-          <span class="icon">⌥</span> GitHub
-        </a>
-        <a href="tel:+919319312373" class="link-pill">
-          <span class="icon">☏</span> +91 93193 12373
-        </a>
+      <div class="hero-actions reveal">
+        <a href="mailto:sangeet.kumar.das95@gmail.com" class="btn btn-primary">✉ &nbsp;Email Me</a>
+        <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
+        <a href="https://github.com/sangeetd" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+        <a href="tel:+919319312373" class="btn btn-ghost">☏ +91 93193 12373</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">scroll ↓</div>
   </header>
+
+  <!-- ── STATS ── -->
+  <section class="stats-bar">
+    <div class="container stats-inner">
+      <div class="stat reveal">
+        <span class="stat-num">8+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num">30M</span>
+        <span class="stat-label">FastTag Users Served</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num">40%</span>
+        <span class="stat-label">Build Time Reduction at Oracle</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num">4</span>
+        <span class="stat-label">Product &amp; Consulting Companies</span>
+      </div>
+    </div>
+  </section>
 
   <main>
 
-    <!-- SKILLS -->
+    <!-- ── SKILLS ── -->
     <section class="section" id="skills">
-      <div class="section-label reveal">01 — Skills</div>
-      <h2 class="section-title reveal">Technical<br/>Arsenal</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">λ</div>
-          <h3>Languages</h3>
-          <ul>
-            <li>Java</li><li>Kotlin</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li>
-          </ul>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">01 — Technical Skills</span>
+          <h2 class="section-title">Skills &amp; Tech Stack</h2>
         </div>
+        <div class="skills-grid">
 
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">⬡</div>
-          <h3>Frameworks</h3>
-          <ul>
-            <li>Spring Boot</li><li>Spring MVC</li><li>Hibernate</li><li>ReactJS</li>
-          </ul>
+          <div class="skill-card reveal">
+            <div class="skill-icon">λ</div>
+            <h3>Languages</h3>
+            <ul>
+              <li>Java</li>
+              <li>Kotlin</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">⬡</div>
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Spring Boot</li>
+              <li>Spring MVC</li>
+              <li>Hibernate</li>
+              <li>ReactJS</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">∞</div>
+            <h3>Architecture</h3>
+            <ul>
+              <li>Microservices</li>
+              <li>REST APIs</li>
+              <li>Event-Driven</li>
+              <li>Distributed Systems</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">☁</div>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul>
+              <li>Oracle Cloud (OCI)</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>Jenkins &amp; CI/CD</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">⚡</div>
+            <h3>Messaging</h3>
+            <ul>
+              <li>Apache Kafka</li>
+            </ul>
+            <h3 class="mt-sm">Tools &amp; Practices</h3>
+            <ul>
+              <li>JIRA · Agile / Scrum</li>
+              <li>Linux · Git</li>
+              <li>TDD · System Design</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">◈</div>
+            <h3>Databases</h3>
+            <ul>
+              <li>OracleDB</li>
+              <li>PostgreSQL · MySQL</li>
+              <li>MongoDB</li>
+              <li>Cassandra</li>
+              <li>Firebase</li>
+            </ul>
+          </div>
+
         </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">∞</div>
-          <h3>Architecture</h3>
-          <ul>
-            <li>Microservices</li><li>REST APIs</li><li>Event-Driven</li><li>Distributed Systems</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">☁</div>
-          <h3>Cloud &amp; DevOps</h3>
-          <ul>
-            <li>OCI</li><li>Docker</li><li>Kubernetes</li><li>Jenkins &amp; CI/CD</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">⚡</div>
-          <h3>Messaging</h3>
-          <ul>
-            <li>Apache Kafka</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">◈</div>
-          <h3>Databases</h3>
-          <ul>
-            <li>OracleDB</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Cassandra</li><li>Firebase</li>
-          </ul>
-        </div>
-
       </div>
     </section>
 
-    <!-- DIVIDER -->
-    <div class="divider reveal"></div>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="section-label reveal">02 — Experience</div>
-      <h2 class="section-title reveal">Where I've<br/>Made Impact</h2>
-
-      <div class="timeline">
-
-        <!-- ThoughtWorks -->
-        <div class="timeline-item reveal">
-          <div class="tl-left">
-            <span class="tl-period">Jan 2024 — Present</span>
-            <span class="tl-tag current">Current</span>
-          </div>
-          <div class="tl-right">
-            <h3 class="tl-company">ThoughtWorks</h3>
-            <div class="tl-role">Senior Development Engineer</div>
-            <ul class="tl-bullets">
-              <li>Led end-to-end delivery of critical product features — requirement analysis, HLD, LLD, cross-team coordination</li>
-              <li>Designed scalable microservices &amp; event-driven workflows for <strong>~30M FastTag users</strong></li>
-              <li>Optimized Kubernetes CPU &amp; memory limits to reduce irregular pod usage &amp; infrastructure costs</li>
-              <li>Mentored junior engineers, improving code quality and delivery confidence across the team</li>
-            </ul>
-            <div class="tl-stack">
-              <span>Java</span><span>Kotlin</span><span>Spring Boot</span><span>Kafka</span><span>MongoDB</span><span>Docker</span><span>Kubernetes</span>
-            </div>
-          </div>
+    <!-- ── EXPERIENCE ── -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">02 — Work History</span>
+          <h2 class="section-title">Experience</h2>
         </div>
 
-        <!-- Oracle -->
-        <div class="timeline-item reveal">
-          <div class="tl-left">
-            <span class="tl-period">Sept 2021 — Jan 2024</span>
-          </div>
-          <div class="tl-right">
-            <h3 class="tl-company">Oracle</h3>
-            <div class="tl-role">Application Engineer</div>
-            <ul class="tl-bullets">
-              <li>Modernized backend APIs to cloud-native architecture, cutting latency by <strong>~7%</strong></li>
-              <li>Refactored legacy codebases &amp; upgraded frameworks, reducing build time by <strong>~40%</strong></li>
-              <li>Maintained &gt;90% successful build rate via clean code practices, reviews &amp; automated testing</li>
-            </ul>
-            <div class="tl-stack">
-              <span>Java</span><span>Spring Boot</span><span>JavaScript</span><span>Oracle JET</span><span>OCI</span>
-            </div>
-          </div>
-        </div>
+        <div class="timeline">
 
-        <!-- Deloitte -->
-        <div class="timeline-item reveal">
-          <div class="tl-left">
-            <span class="tl-period">Nov 2020 — Sept 2021</span>
-          </div>
-          <div class="tl-right">
-            <h3 class="tl-company">Deloitte</h3>
-            <div class="tl-role">Business Technology Analyst</div>
-            <ul class="tl-bullets">
-              <li>Led modernization of legacy systems to cloud-based web apps using Spring Boot &amp; Angular</li>
-              <li>Reduced legacy system load by <strong>~30%</strong> while improving performance &amp; scalability</li>
-            </ul>
-            <div class="tl-stack">
-              <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Angular</span><span>Cassandra</span>
+          <article class="tl-item reveal">
+            <div class="tl-meta">
+              <span class="tl-period">Jan 2024 — Present</span>
+              <span class="tl-current">Current</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Rosmerta -->
-        <div class="timeline-item reveal">
-          <div class="tl-left">
-            <span class="tl-period">May 2018 — Nov 2020</span>
-          </div>
-          <div class="tl-right">
-            <h3 class="tl-company">Rosmerta Technologies</h3>
-            <div class="tl-role">Software Developer</div>
-            <ul class="tl-bullets">
-              <li>Translated business requirements into scalable architectural proposals, contributing to <strong>~15% revenue growth</strong></li>
-              <li>Migrated legacy Spring applications to Spring Boot, improving startup time &amp; maintainability</li>
-              <li>Introduced GitHub-based version control workflows, significantly improving collaboration &amp; release stability</li>
-              <li>Delivered 5000+ lines of production-grade code across RESTful APIs, backend services &amp; UI components</li>
-            </ul>
-            <div class="tl-stack">
-              <span>Java</span><span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span><span>Linux</span>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-company">ThoughtWorks</h3>
+                  <p class="tl-role">Senior Development Engineer</p>
+                </div>
+                <div class="tl-monogram">TW</div>
+              </div>
+              <ul class="tl-list">
+                <li>Led end-to-end feature delivery — requirement analysis, HLD, LLD &amp; cross-team coordination</li>
+                <li>Designed scalable microservices &amp; event-driven workflows powering <strong>~30M FastTag users</strong></li>
+                <li>Optimized Kubernetes CPU &amp; memory limits, reducing irregular pod usage &amp; infrastructure costs</li>
+                <li>Mentored junior engineers, improving code quality and delivery confidence team-wide</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Java</span><span>Kotlin</span><span>Spring Boot</span>
+                <span>Kafka</span><span>MongoDB</span><span>Docker</span><span>Kubernetes</span>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
+          <article class="tl-item reveal">
+            <div class="tl-meta">
+              <span class="tl-period">Sept 2021 — Jan 2024</span>
+            </div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-company">Oracle</h3>
+                  <p class="tl-role">Application Engineer</p>
+                </div>
+                <div class="tl-monogram">OR</div>
+              </div>
+              <ul class="tl-list">
+                <li>Modernized backend APIs to cloud-native architecture, cutting latency by <strong>~7%</strong></li>
+                <li>Refactored legacy codebases &amp; upgraded frameworks, reducing build time by <strong>~40%</strong></li>
+                <li>Maintained &gt;90% successful build rate via clean code practices &amp; automated testing</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Java</span><span>Spring Boot</span><span>JavaScript</span>
+                <span>Oracle JET</span><span>OCI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-meta">
+              <span class="tl-period">Nov 2020 — Sept 2021</span>
+            </div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-company">Deloitte</h3>
+                  <p class="tl-role">Business Technology Analyst</p>
+                </div>
+                <div class="tl-monogram">DL</div>
+              </div>
+              <ul class="tl-list">
+                <li>Led legacy-to-cloud modernization using Java Spring Boot &amp; Angular</li>
+                <li>Reduced legacy system load by <strong>~30%</strong> while improving performance &amp; scalability</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Java</span><span>Spring Boot</span><span>Angular</span>
+                <span>Cassandra</span><span>REST APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-meta">
+              <span class="tl-period">May 2018 — Nov 2020</span>
+            </div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-company">Rosmerta Technologies</h3>
+                  <p class="tl-role">Software Developer</p>
+                </div>
+                <div class="tl-monogram">RT</div>
+              </div>
+              <ul class="tl-list">
+                <li>Translated business needs into scalable architecture proposals, contributing to <strong>~15% revenue growth</strong></li>
+                <li>Migrated legacy Spring apps to Spring Boot, improving startup time &amp; maintainability</li>
+                <li>Introduced GitHub-based version control &amp; branching workflows across projects</li>
+                <li>Delivered <strong>5,000+ lines</strong> of production-grade code across APIs, services &amp; UI components</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Java</span><span>Spring Boot</span><span>Angular</span>
+                <span>PostgreSQL</span><span>Linux</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
-    <!-- DIVIDER -->
-    <div class="divider reveal"></div>
-
-    <!-- DOMAINS -->
+    <!-- ── DOMAINS ── -->
     <section class="section" id="domains">
-      <div class="section-label reveal">03 — Domains &amp; Highlights</div>
-      <h2 class="section-title reveal">Key Areas<br/>of Expertise</h2>
-      <div class="domains-grid">
-
-        <div class="domain-card reveal">
-          <div class="domain-num">01</div>
-          <h3>Fintech &amp; Payments</h3>
-          <p>Architected and scaled microservices powering ~30M FastTag users — one of India's largest digital toll payment systems.</p>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">03 — Key Areas</span>
+          <h2 class="section-title">Domains &amp; Expertise</h2>
         </div>
+        <div class="domains-grid">
 
-        <div class="domain-card reveal">
-          <div class="domain-num">02</div>
-          <h3>Event-Driven Systems</h3>
-          <p>Deep expertise in Apache Kafka for building resilient, asynchronous data pipelines and event-driven microservice workflows.</p>
+          <div class="domain-card reveal">
+            <span class="domain-num">01</span>
+            <h3>Fintech &amp; Payments</h3>
+            <p>Architected microservices powering ~30M FastTag users — one of India's largest digital toll payment platforms.</p>
+          </div>
+
+          <div class="domain-card reveal">
+            <span class="domain-num">02</span>
+            <h3>Event-Driven Systems</h3>
+            <p>Deep expertise in Apache Kafka for building resilient, async data pipelines and event-driven microservice workflows.</p>
+          </div>
+
+          <div class="domain-card reveal">
+            <span class="domain-num">03</span>
+            <h3>Cloud-Native &amp; DevOps</h3>
+            <p>Hands-on with OCI, Docker &amp; Kubernetes including infra optimization, resource tuning, and CI/CD pipeline management.</p>
+          </div>
+
+          <div class="domain-card reveal">
+            <span class="domain-num">04</span>
+            <h3>Enterprise Modernization</h3>
+            <p>Proven track record migrating legacy systems to modern cloud architectures at Oracle and Deloitte, reducing latency and build times.</p>
+          </div>
+
+          <div class="domain-card reveal">
+            <span class="domain-num">05</span>
+            <h3>System Design &amp; Leadership</h3>
+            <p>Leads HLD/LLD discussions, writes JIRA breakdowns, mentors engineers, and drives cross-team delivery end-to-end.</p>
+          </div>
+
+          <div class="domain-card reveal">
+            <span class="domain-num">06</span>
+            <h3>Polyglot Backend</h3>
+            <p>Fluent across Java, Kotlin, and multiple DB paradigms — relational, document, column-family &amp; real-time stores.</p>
+          </div>
+
         </div>
-
-        <div class="domain-card reveal">
-          <div class="domain-num">03</div>
-          <h3>Cloud-Native &amp; DevOps</h3>
-          <p>Hands-on with OCI, Docker, and Kubernetes — including infra optimization, resource tuning, and CI/CD pipeline management.</p>
-        </div>
-
-        <div class="domain-card reveal">
-          <div class="domain-num">04</div>
-          <h3>Enterprise Application Modernization</h3>
-          <p>Track record of migrating legacy systems to modern, cloud-ready architectures at Oracle and Deloitte — reducing latency, build time, and operational overhead.</p>
-        </div>
-
-        <div class="domain-card reveal">
-          <div class="domain-num">05</div>
-          <h3>System Design &amp; Technical Leadership</h3>
-          <p>Leads HLD/LLD discussions, writes JIRA breakdowns, mentors engineers, and drives cross-team delivery from design to production.</p>
-        </div>
-
-        <div class="domain-card reveal">
-          <div class="domain-num">06</div>
-          <h3>Polyglot Backend Engineering</h3>
-          <p>Fluent across Java, Kotlin, and multiple database paradigms — relational, document, column-family, and real-time (Oracle, Postgres, Mongo, Cassandra, Firebase).</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- DIVIDER -->
-    <div class="divider reveal"></div>
-
-    <!-- EDUCATION -->
-    <section class="section section--education" id="education">
-      <div class="section-label reveal">04 — Education</div>
-      <div class="edu-card reveal">
-        <div class="edu-degree">B.Tech in Computer Science Engineering</div>
-        <div class="edu-university">Lingaya's University</div>
-        <div class="edu-year">Class of 2017</div>
+    <!-- ── EDUCATION ── -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 — Education</span>
+          <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <h3 class="edu-degree">Bachelor of Technology in Computer Science Engineering</h3>
+            <p class="edu-university">Lingaya's University</p>
+            <p class="edu-year">Class of 2017</p>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ── FOOTER ── -->
   <footer class="footer">
-    <div class="footer-inner">
-      <span>Sangeet Das © 2025</span>
+    <div class="container footer-inner">
+      <p>© 2025 Sangeet Das · Hosted on GitHub Pages</p>
       <div class="footer-links">
         <a href="mailto:sangeet.kumar.das95@gmail.com">Email</a>
         <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener">LinkedIn</a>
