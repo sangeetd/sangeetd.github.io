@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ── NAV ── -->
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">SD<span>.</span></a>
@@ -35,25 +35,72 @@
     </div>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <header class="hero">
-    <div class="container">
-      <p class="hero-badge reveal">Senior Software Engineer &nbsp;·&nbsp; 8 Years of Experience</p>
-      <h1 class="hero-name reveal">Sangeet Das</h1>
-      <p class="hero-sub reveal">
-        Designing high-performance backend &amp; cloud-native systems.<br class="d-none-mobile"/>
-        Java · Kotlin · Microservices · Kafka · Distributed Architecture.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="mailto:sangeet.kumar.das95@gmail.com" class="btn btn-primary">✉ &nbsp;Email Me</a>
-        <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
-        <a href="https://github.com/sangeetd" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
-        <a href="tel:+919319312373" class="btn btn-ghost">☏ +91 93193 12373</a>
+    <div class="container hero-container">
+
+      <!-- Left: text -->
+      <div class="hero-text">
+        <h1 class="hero-name reveal">Sangeet Das</h1>
+        <p class="hero-title reveal">Senior Software Engineer &nbsp;·&nbsp; 8 Years of Experience</p>
+
+        <p class="hero-desc reveal">
+          I design and build scalable, high-performance backend systems and cloud-native microservices.
+          Day-to-day, I own feature delivery end-to-end — writing technical specs, leading design reviews
+          (HLD &amp; LLD), hands-on implementation, code reviews, and production debugging.
+          I collaborate with product and cross-functional teams to turn complex requirements into reliable
+          distributed systems using Java, Kotlin, and Spring Boot, with Apache Kafka powering event-driven
+          workflows at scale. Outside of building, I mentor engineers, run team knowledge-sharing sessions,
+          and continuously tune Kubernetes infrastructure to keep systems efficient and cost-effective.
+        </p>
+
+        <!-- Contact row with icons -->
+        <div class="hero-contacts reveal">
+          <a href="mailto:sangeet.kumar.das95@gmail.com" class="contact-link">
+            <svg class="ci" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 6l8 6 8-6"/></svg>
+            sangeet.kumar.das95@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener" class="contact-link">
+            <svg class="ci" viewBox="0 0 20 20" fill="currentColor"><path d="M16.5 2h-13A1.5 1.5 0 002 3.5v13A1.5 1.5 0 003.5 18h13a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2zM7 15H4.5V8H7v7zm-1.25-8.15a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88zM16 15h-2.5v-3.5c0-.84-.02-1.92-1.17-1.92-1.17 0-1.35.91-1.35 1.86V15H8.5V8H11v1.06h.03c.35-.66 1.2-1.36 2.47-1.36 2.64 0 3.13 1.74 3.13 4V15z"/></svg>
+            linkedin.com/in/sangeet-das
+          </a>
+          <a href="https://github.com/sangeetd" target="_blank" rel="noopener" class="contact-link">
+            <svg class="ci" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a8 8 0 00-2.53 15.59c.4.07.55-.17.55-.38v-1.34c-2.23.49-2.7-1.07-2.7-1.07-.36-.93-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.71 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.97 0-.88.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.52.56.83 1.27.83 2.15 0 3.09-1.88 3.77-3.67 3.97.29.25.54.73.54 1.48v2.19c0 .21.14.46.55.38A8 8 0 0010 2z" clip-rule="evenodd"/></svg>
+            github.com/sangeetd
+          </a>
+          <a href="tel:+919319312373" class="contact-link">
+            <svg class="ci" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5.5 3A1.5 1.5 0 004 4.5v1a10 10 0 0010.5 10.5h1A1.5 1.5 0 0017 14.5v-1.38a1.5 1.5 0 00-1.05-1.43l-1.93-.64a1.5 1.5 0 00-1.64.5l-.44.59a7.5 7.5 0 01-4.08-4.08l.6-.44a1.5 1.5 0 00.49-1.64l-.64-1.93A1.5 1.5 0 006.88 3H5.5z"/></svg>
+            +91 93193 12373
+          </a>
+        </div>
       </div>
+
+      <!-- Right: professional avatar -->
+      <div class="hero-avatar reveal">
+        <div class="avatar-ring">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+            <!-- Background circle -->
+            <circle cx="100" cy="100" r="100" fill="#EEF2FB"/>
+            <!-- Body / torso -->
+            <ellipse cx="100" cy="155" rx="46" ry="30" fill="#C7D4F8"/>
+            <!-- Neck -->
+            <rect x="90" y="108" width="20" height="22" rx="6" fill="#A8BEEE"/>
+            <!-- Head -->
+            <ellipse cx="100" cy="88" rx="32" ry="34" fill="#A8BEEE"/>
+            <!-- Hair / top -->
+            <ellipse cx="100" cy="60" rx="32" ry="16" fill="#0f1f3d"/>
+            <!-- Jacket collar left -->
+            <path d="M54 185 Q70 140 100 135 Q130 140 146 185" fill="#1a56db" opacity="0.85"/>
+            <!-- Shirt highlight -->
+            <path d="M88 135 L100 148 L112 135 L100 130Z" fill="white" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
     </div>
   </header>
 
-  <!-- ── STATS ── -->
+  <!-- STATS BAR -->
   <section class="stats-bar">
     <div class="container stats-inner">
       <div class="stat reveal">
@@ -68,207 +115,169 @@
       <div class="stat-divider"></div>
       <div class="stat reveal">
         <span class="stat-num">40%</span>
-        <span class="stat-label">Build Time Reduction at Oracle</span>
+        <span class="stat-label">Build Time Reduction</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal">
         <span class="stat-num">4</span>
-        <span class="stat-label">Product &amp; Consulting Companies</span>
+        <span class="stat-label">Companies Worked At</span>
       </div>
     </div>
   </section>
 
   <main>
 
-    <!-- ── SKILLS ── -->
+    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">01 — Technical Skills</span>
           <h2 class="section-title">Skills &amp; Tech Stack</h2>
         </div>
         <div class="skills-grid">
 
           <div class="skill-card reveal">
-            <div class="skill-icon">λ</div>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
             <h3>Languages</h3>
-            <ul>
-              <li>Java</li>
-              <li>Kotlin</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>SQL</li>
-            </ul>
+            <ul><li>Java</li><li>Kotlin</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li></ul>
           </div>
 
           <div class="skill-card reveal">
-            <div class="skill-icon">⬡</div>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v3M14 17.5h3M20 17.5h.01"/></svg>
+            </div>
             <h3>Frameworks</h3>
-            <ul>
-              <li>Spring Boot</li>
-              <li>Spring MVC</li>
-              <li>Hibernate</li>
-              <li>ReactJS</li>
-            </ul>
+            <ul><li>Spring Boot</li><li>Spring MVC</li><li>Hibernate</li><li>ReactJS</li></ul>
           </div>
 
           <div class="skill-card reveal">
-            <div class="skill-icon">∞</div>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M8.5 17l3.5-6 3.5 6"/></svg>
+            </div>
             <h3>Architecture</h3>
-            <ul>
-              <li>Microservices</li>
-              <li>REST APIs</li>
-              <li>Event-Driven</li>
-              <li>Distributed Systems</li>
-            </ul>
+            <ul><li>Microservices</li><li>REST APIs</li><li>Event-Driven</li><li>Distributed Systems</li></ul>
           </div>
 
           <div class="skill-card reveal">
-            <div class="skill-icon">☁</div>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
             <h3>Cloud &amp; DevOps</h3>
-            <ul>
-              <li>Oracle Cloud (OCI)</li>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-              <li>Jenkins &amp; CI/CD</li>
-            </ul>
+            <ul><li>Oracle Cloud (OCI)</li><li>Docker</li><li>Kubernetes</li><li>Jenkins &amp; CI/CD</li></ul>
           </div>
 
           <div class="skill-card reveal">
-            <div class="skill-icon">⚡</div>
-            <h3>Messaging</h3>
-            <ul>
-              <li>Apache Kafka</li>
-            </ul>
-            <h3 class="mt-sm">Tools &amp; Practices</h3>
-            <ul>
-              <li>JIRA · Agile / Scrum</li>
-              <li>Linux · Git</li>
-              <li>TDD · System Design</li>
-            </ul>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Messaging &amp; Tools</h3>
+            <ul><li>Apache Kafka</li><li>JIRA · Agile / Scrum</li><li>Linux · Git</li><li>TDD · System Design</li></ul>
           </div>
 
           <div class="skill-card reveal">
-            <div class="skill-icon">◈</div>
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
             <h3>Databases</h3>
-            <ul>
-              <li>OracleDB</li>
-              <li>PostgreSQL · MySQL</li>
-              <li>MongoDB</li>
-              <li>Cassandra</li>
-              <li>Firebase</li>
-            </ul>
+            <ul><li>OracleDB</li><li>PostgreSQL · MySQL</li><li>MongoDB</li><li>Cassandra</li><li>Firebase</li></ul>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ── EXPERIENCE ── -->
+    <!-- EXPERIENCE -->
     <section class="section section-alt" id="experience">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">02 — Work History</span>
-          <h2 class="section-title">Experience</h2>
+          <h2 class="section-title">Work Experience</h2>
         </div>
 
         <div class="timeline">
 
+          <!-- ThoughtWorks -->
           <article class="tl-item reveal">
-            <div class="tl-meta">
-              <span class="tl-period">Jan 2024 — Present</span>
-              <span class="tl-current">Current</span>
+            <div class="tl-topline">
+              <span class="tl-role">Senior Development Engineer</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-company">ThoughtWorks</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-period">Jan 2024 – Present</span>
             </div>
-            <div class="tl-body">
-              <div class="tl-head">
-                <div>
-                  <h3 class="tl-company">ThoughtWorks</h3>
-                  <p class="tl-role">Senior Development Engineer</p>
-                </div>
-                <div class="tl-monogram">TW</div>
-              </div>
-              <ul class="tl-list">
-                <li>Led end-to-end feature delivery — requirement analysis, HLD, LLD &amp; cross-team coordination</li>
-                <li>Designed scalable microservices &amp; event-driven workflows powering <strong>~30M FastTag users</strong></li>
-                <li>Optimized Kubernetes CPU &amp; memory limits, reducing irregular pod usage &amp; infrastructure costs</li>
-                <li>Mentored junior engineers, improving code quality and delivery confidence team-wide</li>
-              </ul>
-              <div class="tl-tags">
-                <span>Java</span><span>Kotlin</span><span>Spring Boot</span>
-                <span>Kafka</span><span>MongoDB</span><span>Docker</span><span>Kubernetes</span>
-              </div>
+            <ul class="tl-list">
+              <li>Led end-to-end feature delivery — requirement analysis, HLD, LLD &amp; cross-team coordination</li>
+              <li>Designed scalable microservices &amp; event-driven workflows powering <strong>~30M FastTag users</strong></li>
+              <li>Optimized Kubernetes CPU &amp; memory limits, reducing irregular pod usage &amp; infrastructure costs</li>
+              <li>Prepared detailed JIRA stories and technical breakdowns for smooth sprint execution</li>
+              <li>Mentored junior engineers, improving code quality and delivery confidence team-wide</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Kotlin</span><span>Spring Boot</span>
+              <span>Kafka</span><span>MongoDB</span><span>Docker</span><span>Kubernetes</span>
             </div>
           </article>
 
+          <!-- Oracle -->
           <article class="tl-item reveal">
-            <div class="tl-meta">
-              <span class="tl-period">Sept 2021 — Jan 2024</span>
+            <div class="tl-topline">
+              <span class="tl-role">Application Engineer</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-company">Oracle</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-period">Sept 2021 – Jan 2024</span>
             </div>
-            <div class="tl-body">
-              <div class="tl-head">
-                <div>
-                  <h3 class="tl-company">Oracle</h3>
-                  <p class="tl-role">Application Engineer</p>
-                </div>
-                <div class="tl-monogram">OR</div>
-              </div>
-              <ul class="tl-list">
-                <li>Modernized backend APIs to cloud-native architecture, cutting latency by <strong>~7%</strong></li>
-                <li>Refactored legacy codebases &amp; upgraded frameworks, reducing build time by <strong>~40%</strong></li>
-                <li>Maintained &gt;90% successful build rate via clean code practices &amp; automated testing</li>
-              </ul>
-              <div class="tl-tags">
-                <span>Java</span><span>Spring Boot</span><span>JavaScript</span>
-                <span>Oracle JET</span><span>OCI</span>
-              </div>
+            <ul class="tl-list">
+              <li>Owned design and development of new web application components, improving user experience</li>
+              <li>Modernized backend APIs to cloud-native architecture, cutting latency by <strong>~7%</strong></li>
+              <li>Refactored legacy codebases &amp; upgraded frameworks, reducing build time by <strong>~40%</strong></li>
+              <li>Maintained &gt;90% successful build rate via clean code practices &amp; automated testing</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Spring Boot</span><span>JavaScript</span>
+              <span>Oracle JET</span><span>OCI</span>
             </div>
           </article>
 
+          <!-- Deloitte -->
           <article class="tl-item reveal">
-            <div class="tl-meta">
-              <span class="tl-period">Nov 2020 — Sept 2021</span>
+            <div class="tl-topline">
+              <span class="tl-role">Business Technology Analyst</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-company">Deloitte</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-period">Nov 2020 – Sept 2021</span>
             </div>
-            <div class="tl-body">
-              <div class="tl-head">
-                <div>
-                  <h3 class="tl-company">Deloitte</h3>
-                  <p class="tl-role">Business Technology Analyst</p>
-                </div>
-                <div class="tl-monogram">DL</div>
-              </div>
-              <ul class="tl-list">
-                <li>Led legacy-to-cloud modernization using Java Spring Boot &amp; Angular</li>
-                <li>Reduced legacy system load by <strong>~30%</strong> while improving performance &amp; scalability</li>
-              </ul>
-              <div class="tl-tags">
-                <span>Java</span><span>Spring Boot</span><span>Angular</span>
-                <span>Cassandra</span><span>REST APIs</span>
-              </div>
+            <ul class="tl-list">
+              <li>Led modernization of legacy systems to cloud-based web applications using Spring Boot &amp; Angular</li>
+              <li>Reduced load on legacy systems by <strong>~30%</strong> while improving performance &amp; scalability</li>
+              <li>Collaborated with cross-functional teams to deliver high-quality, production-ready systems</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Spring Boot</span><span>Angular</span>
+              <span>Cassandra</span><span>REST APIs</span>
             </div>
           </article>
 
+          <!-- Rosmerta -->
           <article class="tl-item reveal">
-            <div class="tl-meta">
-              <span class="tl-period">May 2018 — Nov 2020</span>
+            <div class="tl-topline">
+              <span class="tl-role">Software Developer</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-company">Rosmerta Technologies</span>
+              <span class="tl-sep">·</span>
+              <span class="tl-period">May 2018 – Nov 2020</span>
             </div>
-            <div class="tl-body">
-              <div class="tl-head">
-                <div>
-                  <h3 class="tl-company">Rosmerta Technologies</h3>
-                  <p class="tl-role">Software Developer</p>
-                </div>
-                <div class="tl-monogram">RT</div>
-              </div>
-              <ul class="tl-list">
-                <li>Translated business needs into scalable architecture proposals, contributing to <strong>~15% revenue growth</strong></li>
-                <li>Migrated legacy Spring apps to Spring Boot, improving startup time &amp; maintainability</li>
-                <li>Introduced GitHub-based version control &amp; branching workflows across projects</li>
-                <li>Delivered <strong>5,000+ lines</strong> of production-grade code across APIs, services &amp; UI components</li>
-              </ul>
-              <div class="tl-tags">
-                <span>Java</span><span>Spring Boot</span><span>Angular</span>
-                <span>PostgreSQL</span><span>Linux</span>
-              </div>
+            <ul class="tl-list">
+              <li>Translated business needs into scalable architecture proposals, contributing to <strong>~15% revenue growth</strong></li>
+              <li>Migrated legacy Spring apps to Spring Boot, improving startup time &amp; maintainability</li>
+              <li>Introduced GitHub-based version control &amp; structured branching workflows across projects</li>
+              <li>Delivered <strong>5,000+ lines</strong> of production-grade code across REST APIs, backend services &amp; UI components</li>
+              <li>Optimized SQL queries and database interactions for critical business workflows</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Spring Boot</span><span>Angular</span>
+              <span>PostgreSQL</span><span>Linux</span>
             </div>
           </article>
 
@@ -276,47 +285,58 @@
       </div>
     </section>
 
-    <!-- ── DOMAINS ── -->
+    <!-- DOMAINS -->
     <section class="section" id="domains">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">03 — Key Areas</span>
           <h2 class="section-title">Domains &amp; Expertise</h2>
         </div>
         <div class="domains-grid">
 
           <div class="domain-card reveal">
-            <span class="domain-num">01</span>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            </div>
             <h3>Fintech &amp; Payments</h3>
             <p>Architected microservices powering ~30M FastTag users — one of India's largest digital toll payment platforms.</p>
           </div>
 
           <div class="domain-card reveal">
-            <span class="domain-num">02</span>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
             <h3>Event-Driven Systems</h3>
             <p>Deep expertise in Apache Kafka for building resilient, async data pipelines and event-driven microservice workflows.</p>
           </div>
 
           <div class="domain-card reveal">
-            <span class="domain-num">03</span>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
             <h3>Cloud-Native &amp; DevOps</h3>
-            <p>Hands-on with OCI, Docker &amp; Kubernetes including infra optimization, resource tuning, and CI/CD pipeline management.</p>
+            <p>Hands-on with OCI, Docker &amp; Kubernetes — infra optimization, resource tuning, and CI/CD pipeline management.</p>
           </div>
 
           <div class="domain-card reveal">
-            <span class="domain-num">04</span>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v6H4z"/><path d="M4 14h16v6H4z"/><path d="M8 7h.01M8 17h.01"/></svg>
+            </div>
             <h3>Enterprise Modernization</h3>
-            <p>Proven track record migrating legacy systems to modern cloud architectures at Oracle and Deloitte, reducing latency and build times.</p>
+            <p>Proven track record migrating legacy systems to modern cloud architectures at Oracle and Deloitte, reducing latency and build overhead.</p>
           </div>
 
           <div class="domain-card reveal">
-            <span class="domain-num">05</span>
-            <h3>System Design &amp; Leadership</h3>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Technical Leadership</h3>
             <p>Leads HLD/LLD discussions, writes JIRA breakdowns, mentors engineers, and drives cross-team delivery end-to-end.</p>
           </div>
 
           <div class="domain-card reveal">
-            <span class="domain-num">06</span>
+            <div class="domain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
             <h3>Polyglot Backend</h3>
             <p>Fluent across Java, Kotlin, and multiple DB paradigms — relational, document, column-family &amp; real-time stores.</p>
           </div>
@@ -325,17 +345,18 @@
       </div>
     </section>
 
-    <!-- ── EDUCATION ── -->
+    <!-- EDUCATION -->
     <section class="section section-alt" id="education">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">04 — Education</span>
-          <h2 class="section-title">Academic Background</h2>
+          <h2 class="section-title">Education</h2>
         </div>
         <div class="edu-card reveal">
-          <div class="edu-icon">🎓</div>
+          <div class="edu-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5"/></svg>
+          </div>
           <div>
-            <h3 class="edu-degree">Bachelor of Technology in Computer Science Engineering</h3>
+            <h3 class="edu-degree">Bachelor of Technology — Computer Science Engineering</h3>
             <p class="edu-university">Lingaya's University</p>
             <p class="edu-year">Class of 2017</p>
           </div>
@@ -345,14 +366,23 @@
 
   </main>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>© 2025 Sangeet Das · Hosted on GitHub Pages</p>
       <div class="footer-links">
-        <a href="mailto:sangeet.kumar.das95@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/sangeetd" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:sangeet.kumar.das95@gmail.com">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 6l8 6 8-6"/></svg>
+          Email
+        </a>
+        <a href="https://linkedin.com/in/sangeet-das" target="_blank" rel="noopener">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M16.5 2h-13A1.5 1.5 0 002 3.5v13A1.5 1.5 0 003.5 18h13a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2zM7 15H4.5V8H7v7zm-1.25-8.15a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88zM16 15h-2.5v-3.5c0-.84-.02-1.92-1.17-1.92-1.17 0-1.35.91-1.35 1.86V15H8.5V8H11v1.06h.03c.35-.66 1.2-1.36 2.47-1.36 2.64 0 3.13 1.74 3.13 4V15z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/sangeetd" target="_blank" rel="noopener">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M10 2a8 8 0 00-2.53 15.59c.4.07.55-.17.55-.38v-1.34c-2.23.49-2.7-1.07-2.7-1.07-.36-.93-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.71 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.97 0-.88.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.52.56.83 1.27.83 2.15 0 3.09-1.88 3.77-3.67 3.97.29.25.54.73.54 1.48v2.19c0 .21.14.46.55.38A8 8 0 0010 2z" clip-rule="evenodd"/></svg>
+          GitHub
+        </a>
       </div>
     </div>
   </footer>

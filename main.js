@@ -1,19 +1,17 @@
-// ── Scroll Reveal ────────────────────────────────────────────
+// ── Scroll Reveal ─────────────────────────────────────────────
 (function () {
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        // Stagger siblings inside the same parent
         const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
         const idx = siblings.indexOf(el);
-        const delay = idx * 70;
-        setTimeout(() => el.classList.add('visible'), delay);
+        setTimeout(() => el.classList.add('visible'), idx * 75);
         observer.unobserve(el);
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -28px 0px' }
   );
 
   function init() {
@@ -25,7 +23,7 @@
     : init();
 })();
 
-// ── Mobile Hamburger ─────────────────────────────────────────
+// ── Mobile Hamburger ──────────────────────────────────────────
 (function () {
   const btn  = document.querySelector('.hamburger');
   const menu = document.querySelector('.mobile-menu');
@@ -34,14 +32,9 @@
   btn.addEventListener('click', () => {
     const open = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!open));
-    if (open) {
-      menu.hidden = true;
-    } else {
-      menu.hidden = false;
-    }
+    menu.hidden = open;
   });
 
-  // Close on nav link tap
   menu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       menu.hidden = true;
@@ -50,16 +43,14 @@
   });
 })();
 
-// ── Nav: hide/show on scroll ─────────────────────────────────
+// ── Hide nav on scroll down, show on scroll up ────────────────
 (function () {
   const nav = document.querySelector('.nav');
   if (!nav) return;
   let lastY = 0;
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
-    nav.style.transform = (y > lastY && y > 100)
-      ? 'translateY(-100%)'
-      : 'translateY(0)';
+    nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
     nav.style.transition = 'transform 0.3s ease';
     lastY = y;
   }, { passive: true });
