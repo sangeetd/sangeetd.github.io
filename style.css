@@ -56,13 +56,26 @@ a { color: inherit; text-decoration: none; }
 /* ── REVEAL — soft fade-in, gentle rise ─────── */
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.72s ease, transform 0.72s ease;
+  transform: translateY(16px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ── JUSTIFIED TEXT ──────────────────────────── */
+p, .tl-list li, .hero-desc {
+  text-align: justify;
+  hyphens: auto;
+}
+/* Never justify headings, labels, tags, contacts */
+h1, h2, h3, h4, .hero-title, .hero-badge,
+.tl-topline, .tl-tags, .hero-contacts,
+.contact-link, .section-title,
+.skill-card h3, .domain-card h3,
+.edu-degree, .edu-university, .edu-year,
+.stat-label, .stat-num { text-align: left !important; }
 
 /* Stat numbers animate on reveal */
 @keyframes statIn {
@@ -293,30 +306,74 @@ a { color: inherit; text-decoration: none; }
 
 /* ── SECTIONS ────────────────────────────────── */
 .section {
-  padding: clamp(52px, 7vw, 88px) 0;
-  --sh-bg: var(--bg);           /* used by sticky section header */
+  --sh-bg: var(--bg);
+  padding-bottom: clamp(52px, 7vw, 88px);
 }
 .section-alt {
   background: var(--bg-alt);
   --sh-bg: var(--bg-alt);
 }
 
-/* Sticky section heading — sticks just below the nav while within the section */
+/* Content area below each section header */
+.section-content {
+  padding-top: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+/* ── SECTION HEADER — full-width sticky with theme transition ─ */
 .section-header {
   position: sticky;
-  top: 58px;                    /* matches nav height */
+  top: 58px;                 /* flush below nav */
   z-index: 50;
   background: var(--sh-bg);
-  padding-top: 1.1rem;
-  padding-bottom: 0.75rem;
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(26px, 4vw, 42px) 0 0.9rem; /* top acts as section's leading space */
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s, box-shadow 0.2s;
+
+  /* Smooth IN/OUT transitions — both directions handled automatically */
+  transition:
+    background  0.42s ease,
+    box-shadow  0.38s ease,
+    border-color 0.2s ease;
 }
-/* When sticky (not at natural position), show subtle separation */
+
+/* Title inherits transition so color change is smooth too */
+.section-header .section-title {
+  transition: color 0.42s ease;
+}
+
+/* ── STUCK STATE — navy theme (matches stats-bar) ─────────── */
 .section-header.is-stuck {
-  border-bottom-color: var(--border);
-  box-shadow: 0 2px 12px rgba(15,31,61,0.06);
+  background: var(--navy);
+  padding-top: 0.85rem;       /* compact when pinned */
+  border-bottom-color: transparent;
+  box-shadow: 0 4px 24px rgba(15,31,61,0.18);
+}
+.section-header.is-stuck .section-title {
+  color: #ffffff;
+}
+
+/* Keyframe: brief slide-down on arrival (IN) */
+@keyframes header-arrive {
+  from { opacity: 0.55; transform: translateY(-6px); }
+  to   { opacity: 1;    transform: translateY(0); }
+}
+.section-header.is-stuck {
+  animation: header-arrive 0.36s ease both;
+}
+
+/* Keyframe: slide-up and fade on departure (OUT) */
+@keyframes header-leave {
+  from { opacity: 1;    transform: translateY(0); }
+  to   { opacity: 0.55; transform: translateY(-5px); }
+}
+.section-header.is-leaving {
+  animation: header-leave 0.3s ease both;
+}
+/* Keep navy bg during leave animation */
+.section-header.is-leaving {
+  background: var(--navy);
+}
+.section-header.is-leaving .section-title {
+  color: #ffffff;
 }
 
 .section-title {
