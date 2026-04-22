@@ -5,107 +5,111 @@
 (function () {
   'use strict';
 
-  // ── 1. FOOTER TIMESTAMP ───────────────────────────────────
-  // Uses document.lastModified so it always reflects the last
-  // time the HTML file was actually updated and deployed.
-  function setFooterTimestamp() {
-    const el = document.getElementById('last-updated');
-    if (!el) return;
-
-    const days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    const d = new Date(document.lastModified);
-
-    // Fallback to today if lastModified is epoch-zero (some servers return it that way)
-    const date = (d.getFullYear() > 2000) ? d : new Date();
-
-    el.textContent =
-      'Last updated: ' +
-      days[date.getDay()] + ', ' +
-      date.getDate() + ' ' +
-      months[date.getMonth()] + '. ' +
-      date.getFullYear();
-  }
-
-  // ── 2. SCROLL REVEAL ──────────────────────────────────────
-  // Stagger siblings within the same parent container.
+  // ── 1. SCROLL REVEAL with per-element stagger ─────────────
+  // Each .reveal fades in when it enters the viewport.
+  // Siblings in the same parent get a small stagger delay.
   function initReveal() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const el = entry.target;
-          // Find siblings with .reveal in the same parent
+
+          // Stagger: count position among .reveal siblings in same parent
           const siblings = Array.from(
-            el.parentElement.querySelectorAll(':scope > .reveal, .reveal')
-          ).filter(s => s.parentElement === el.parentElement);
+            el.parentElement.children
+          ).filter(c => c.classList.contains('reveal'));
           const idx = siblings.indexOf(el);
-          const delay = idx * 72; // ms stagger
-          setTimeout(() => el.classList.add('visible'), delay);
+
+          // Base delay from CSS transition-delay (if set) + stagger offset
+          el.style.transitionDelay = (idx * 80) + 'ms';
+          el.classList.add('visible');
           observer.unobserve(el);
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
+      { threshold: 0.07, rootMargin: '0px 0px -20px 0px' }
     );
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }
 
+  // ── 2. PARALLAX on hero background ───────────────────────
+  // Very subtle — moves the hero bg at 25% scroll speed.
+  function initParallax() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y < window.innerHeight * 1.2) {
+          hero.style.backgroundPositionY = (y * 0.25) + 'px';
+        }
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
   // ── 3. ACTIVE NAV SECTION HIGHLIGHTING ───────────────────
-  // Watches each section; when it's in view the matching nav
-  // link gets .nav-active — both desktop and mobile menus.
+  // IntersectionObserver on each <section id="..."> in <main>.
+  // When a section occupies the centre band of the viewport,
+  // its matching nav links get .nav-active (desktop + mobile).
   function initActiveNav() {
-    const sections  = document.querySelectorAll('main section[id]');
-    const navLinks  = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections    = document.querySelectorAll('main section[id]');
+    const navLinks    = document.querySelectorAll('.nav-links a[href^="#"]');
     const mobileLinks = document.querySelectorAll('.mobile-menu a[href^="#"]');
 
-    if (!sections.length || !navLinks.length) return;
+    if (!sections.length) return;
 
     function setActive(id) {
       [...navLinks, ...mobileLinks].forEach(a => {
-        const matches = a.getAttribute('href') === '#' + id;
-        a.classList.toggle('nav-active', matches);
+        a.classList.toggle('nav-active', a.getAttribute('href') === '#' + id);
       });
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the entry with the highest intersection ratio that is intersecting
-        const visible = entries
-          .filter(e => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible.length) setActive(visible[0].target.id);
-      },
-      {
-        // Trigger when section occupies the middle 40% of the viewport
-        rootMargin: '-20% 0px -55% 0px',
-        threshold: [0, 0.1, 0.2, 0.5, 1.0],
-      }
-    );
+    // Use scroll position to determine active section (most reliable approach)
+    const navH = document.querySelector('.nav')?.offsetHeight || 58;
 
-    sections.forEach(s => observer.observe(s));
+    function onScroll() {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        // Section is "active" when its top is within the upper 55% of viewport
+        if (top <= window.innerHeight * 0.42) {
+          current = section.id;
+        }
+      });
+      if (current) setActive(current);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run once on load
   }
 
   // ── 4. STICKY SECTION HEADER DETECTION ───────────────────
-  // Adds .is-stuck to .section-header when it transitions from
-  // its natural position to its sticky position, so CSS can
-  // apply a visual separator.
+  // Adds .is-stuck when a .section-header is pinned at top,
+  // so CSS can render a separator below it.
   function initStickyHeaders() {
     const headers = document.querySelectorAll('.section-header');
-    if (!headers.length) return;
+    const navH = document.querySelector('.nav')?.offsetHeight || 58;
 
-    // Use a sentinel element just above each header to detect sticking
     headers.forEach(header => {
+      // Insert a 1px sentinel just before the header inside the section
       const sentinel = document.createElement('div');
-      sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;';
-      header.parentElement.style.position = 'relative';
-      header.parentElement.insertBefore(sentinel, header);
+      sentinel.style.cssText =
+        'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;visibility:hidden;';
+      const parent = header.closest('.section, .section-alt');
+      if (parent) {
+        parent.style.position = 'relative';
+        parent.insertBefore(sentinel, header);
+      }
 
       const obs = new IntersectionObserver(
-        ([entry]) => {
-          header.classList.toggle('is-stuck', !entry.isIntersecting);
-        },
-        { rootMargin: '-58px 0px 0px 0px', threshold: 0 }
+        ([entry]) => header.classList.toggle('is-stuck', !entry.isIntersecting),
+        { rootMargin: `-${navH + 2}px 0px 0px 0px`, threshold: 0 }
       );
       obs.observe(sentinel);
     });
@@ -120,10 +124,9 @@
     btn.addEventListener('click', () => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!isOpen));
-      menu.hidden = isOpen; // toggle: if was open, now hide; if was closed, now show
+      menu.hidden = isOpen;
     });
 
-    // Close on any mobile link click (including Contact mailto)
     menu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         menu.hidden = true;
@@ -132,45 +135,17 @@
     });
   }
 
-  // ── 6. SMART NAV HIDE ON SCROLL ──────────────────────────
-  // Hides nav when scrolling down quickly; reveals on scroll up.
-  function initNavScroll() {
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-    let lastY = 0;
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY;
-        // Only hide nav after scrolled past 100px and moving down
-        if (y > lastY && y > 100) {
-          nav.style.transform = 'translateY(-100%)';
-        } else {
-          nav.style.transform = 'translateY(0)';
-        }
-        lastY = y;
-        ticking = false;
-      });
-    }, { passive: true });
-  }
-
   // ── INIT ──────────────────────────────────────────────────
   function init() {
-    setFooterTimestamp();
     initReveal();
+    initParallax();
     initActiveNav();
     initStickyHeaders();
     initHamburger();
-    initNavScroll();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', init)
+    : init();
 
 })();
